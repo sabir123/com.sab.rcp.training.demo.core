@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Core
+Bundle-SymbolicName: com.sab.rcp.training.demo.core;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: SAB
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.apache.felix.scr,
+ org.eclipse.equinox.util,
+ org.eclipse.equinox.event,
+ com.sab.rcp.training.demo.view;bundle-version="1.0.0"
+Automatic-Module-Name: com.sab.rcp.training.demo.core
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
