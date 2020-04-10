@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.sab.rcp.training.demo.core.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.sab.rcp.training.demo.core.Perspective"
+            name="My Perspective"
+            id="com.sab.rcp.training.demo.core.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="*">
+         <view
+               id="com.sab.rcp.training.demo.view.myViewID"
+               minimized="false"
+               relationship="left"
+               relative="org.eclipse.ui.editorss"
+               standalone="true">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="com.sab.rcp.training.demo.core.application"
+            name="My RCP App">
+         <property
+               name="appName"
+               value="My RCP App">
+         </property>
+      </product>
+   </extension>
+
+</plugin>
